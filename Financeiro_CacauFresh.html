@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CacauFresh</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <section class="sectionSimulador">
+
+        <header class="headerSimu">
+            <p>Simulador financeiro</p>
+        </header>
+
+        <section id="sectionGeral">
+
+            <article id="cardDiagram">
+
+                <div class="diagram1">
+
+                    <img src="img/farmer2.png">
+                    <p>
+                        Você sabia que até 40% da sua plantação
+                        de cacau pode ser perdida
+                        por pragas causado por umidade e temperatura irregular
+                    </p>
+
+                </div>
+
+                <div class="diagram2">
+                    <div>
+                    <img src="img/farmer.png">
+                    </div>
+                    <p>
+                        Você sabia que até 40% da sua plantação
+                        de cacau pode ser perdida
+                        por pragas causadas por umidade e temperatura irregular
+                    </p>
+                </div>
+
+            </article>
+            
+            <section id="cardSimu">
+                <button style="font-size: 20px;" id="btnVoltar" onclick="mostrarDiagram()">Voltar</button>
+                <div id="topoSimu">
+                
+                <label for="colheitaIdeal">Quantidade total da colheita (Em Kg):</label>
+                <input type="number" id="colheitaIdeal" placeholder="Kg">
+            
+                <label for="valor">Valor do Kg em R$:</label>
+                <input type="number"  id="valor" placeholder="R$">
+
+                <button onclick="calcular()">
+                    Calcular
+                </button>
+            </div>
+                <article id="articleResult">
+                    <img src="img/farmer.png">
+                </div>
+                <p>
+                    Você colhe <span id="span_colheita1"></span>, mas consegue vender apenas 60% de tudo que colheu
+                    Tendo assim uma receita de <span id="span_recConPerd1"></span>
+                    Sendo que sua receita
+                    deveria ser de <span id="span_recSenPerd1"></span>
+                    Ou seja você perde até 40%
+                    Gerando um prejuizo de <span id="span_preju1"></span>
+                </p>
+                </article>
+            </section>
+
+            <section id="cardResult">
+                <article id="result">
+                <div><b>Colheita:</b><br> <span id="span_colheita2"></span></div>
+                <div><b>Venda:</b><br>60%</div>
+                <div><b>Receita com perdas:</b><br> <span id="span_recConPerd2"></span></div>
+                <div><b>Receita sem perdas: </b><br><span id="span_recSenPerd2"></span></div>
+                <div><b>Valor Prejuizo:</b><br> <span id="span_preju2"></span> equivale 40% da plantação</div>
+            </article>
+            </section>
+
+        </section>
+    </section>
+</body>
+
+</html>
+<script src="/js/script.js"></script>
