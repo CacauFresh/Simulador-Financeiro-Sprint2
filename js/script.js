@@ -46,12 +46,13 @@ function calcular() {
 
     articleResult.style.display = "flex"
     cardResult.style.backgroundColor = "#EBFFE1"
-    cardResult.style.width = "60vw"
-    cardSimu.style.width = "40vw"
+    cardResult.style.width = "70vw"
+    cardSimu.style.width = "30vw"
     result.style.display = "block"
     cardDiagram.style.display = "none"
     btnVoltar.style.display = "block"
     topoSimu.style.marginTop="2px"
+    topoSimu.style.fontSize = "26px"
   }
 
 function mostrarDiagram(){
@@ -63,5 +64,5 @@ function mostrarDiagram(){
     cardDiagram.style.display = "block"
     btnVoltar.style.display = "none"
     topoSimu.style.marginTop = "20%"
-    topoSimu.style.fontSize = "10px"
+    topoSimu.style.fontSize = "32px"
 }
