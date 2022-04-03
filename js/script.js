@@ -52,7 +52,7 @@ function calcular() {
     cardDiagram.style.display = "none"
     btnVoltar.style.display = "block"
     topoSimu.style.marginTop="2px"
-    topoSimu.style.fontSize = "26px"
+    topoSimu.style.fontSize = "24px"
   }
 
 function mostrarDiagram(){
