@@ -45,14 +45,23 @@
             </article>
             
             <section id="cardSimu">
-                <button style="font-size: 20px;" id="btnVoltar" onclick="mostrarDiagram()">Voltar</button>
-                <div id="topoSimu">
                 
+                <div id="topoSimu">
+                <button style="font-size: 20px;" id="btnVoltar" onclick="mostrarDiagram()">Voltar</button>
                 <label for="colheitaIdeal">Quantidade total da colheita (Em Kg):</label>
                 <input type="number" id="colheitaIdeal" placeholder="Kg">
             
                 <label for="valor">Valor do Kg em R$:</label>
                 <input type="number"  id="valor" placeholder="R$">
+
+                <div id="perdaCheck">
+                <input type="checkbox"  id="valorPerdaCheck">
+                <span>não sei quanto perdi</span>
+                </div>
+
+                <label for="valorPerda">Valor da perda em R$:</label>
+                <input type="number"  id="input_valorPerda" placeholder="R$">
+
 
                 <button onclick="calcular()">
                     Calcular
@@ -75,10 +84,10 @@
             <section id="cardResult">
                 <article id="result">
                 <div><b>Colheita:</b><br> <span id="span_colheita2"></span></div>
-                <div><b>Venda:</b><br>60%</div>
+                <div><b>Venda em %:</b><br><span id="span_percent_Venda2"></span>%</div>
                 <div><b>Receita com perdas:</b><br> <span id="span_recConPerd2"></span></div>
                 <div><b>Receita sem perdas: </b><br><span id="span_recSenPerd2"></span></div>
-                <div><b>Valor Prejuizo:</b><br> <span id="span_preju2"></span> equivale 40% da plantação</div>
+                <div><b>Valor Prejuizo:</b><br> <span id="span_preju2"></span> equivale  <span id="span_percent_Preju2"></span>% da plantação</div>
             </article>
             </section>
 

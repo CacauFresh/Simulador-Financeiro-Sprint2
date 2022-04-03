@@ -1,15 +1,29 @@
 function calcular() {
 
 
-    var colheita = colheitaIdeal.value
-    var valorPorKg = valor.value
+    var colheita = Number(colheitaIdeal.value)
+    var valorPorKg = Number(valor.value)
+
+    if (valorPerdaCheck.checked == true){
+        var colheitaReal = (colheita - (colheita*0.4))
+        var lucroConPerda = colheitaReal * valorPorKg
+        var lucroIdeal = colheita * valorPorKg
+        var prejuizoBruto = lucroIdeal - lucroConPerda
+        var percent_Preju = (prejuizoBruto / lucroIdeal)*100
+        var percent_Venda = 100 - percent_Preju
+
+      } else {
+        var valorPerda = Number(input_valorPerda.value)
+        var lucroIdeal = colheita * valorPorKg
+        var lucroConPerda = lucroIdeal - valorPerda
+
+        var prejuizoBruto = lucroIdeal - lucroConPerda
+        var percent_Preju = (prejuizoBruto / lucroIdeal)*100
+        var percent_Venda = 100 - percent_Preju
+      }
 
 
-    var lucroIdeal = colheita * valorPorKg
-    var colheitaReal = (colheita - (colheita*0.4))
-    var lucroConPerda = colheitaReal * valorPorKg
 
-    var prejuizoBruto = lucroIdeal - lucroConPerda
 
     //FORMATAÇÃO EM REAL BRL
     var format_lucroConPerda = lucroConPerda.toLocaleString("pt-br",{
@@ -43,16 +57,20 @@ function calcular() {
     span_recConPerd2.innerHTML = `${format_lucroConPerda} `
     span_recSenPerd2.innerHTML = `${format_lucroIdeal} `
     span_preju2.innerHTML = `${format_prejuizoBruto}`
+    span_percent_Venda2.innerHTML= `${percent_Venda.toFixed(2)}`
+    span_percent_Preju2.innerHTML = `${percent_Preju.toFixed(2)}`
 
     articleResult.style.display = "flex"
     cardResult.style.backgroundColor = "#EBFFE1"
-    cardResult.style.width = "70vw"
+    cardResult.style.width = "68vw"
     cardSimu.style.width = "30vw"
     result.style.display = "block"
-    cardDiagram.style.display = "none"
     btnVoltar.style.display = "block"
     topoSimu.style.marginTop="2px"
     topoSimu.style.fontSize = "24px"
+    cardDiagram.style.width = "0"
+    cardDiagram.style.opacity = "0"
+    cardDiagram.style.pointerEvents = "none"
   }
 
 function mostrarDiagram(){
@@ -61,8 +79,10 @@ function mostrarDiagram(){
     cardResult.style.width = "33vw"
     cardSimu.style.width = "33vw"
     result.style.display = "none"
-    cardDiagram.style.display = "block"
+    //cardDiagram.style.display = "block"
     btnVoltar.style.display = "none"
     topoSimu.style.marginTop = "20%"
     topoSimu.style.fontSize = "32px"
+    cardDiagram.style.width = "33vw"
+    cardDiagram.style.opacity = "1"
 }
