@@ -90,6 +90,9 @@
     align-items: center;
     font-size: 26px;
 }
+#topoSimu label{
+    margin-top: 20px;
+}
 
 #cardSimu input[type=number]{
     width: 200px;
@@ -107,6 +110,41 @@
 input[type=number]::-webkit-inner-spin-button { 
     -webkit-appearance: none; 
 }
+
+
+
+/* PLACEHOLDER TOP */
+.user-input-wrp {
+	position: relative;
+	width: 50%;
+}
+.user-input-wrp .inputText{
+	width: 100%;
+	outline: none;
+	border:none;
+	border-bottom: 1px solid #777;
+ 	box-shadow: none !important;
+}
+.user-input-wrp .inputText:focus{
+	border-color: blue;
+	border-width: medium medium 2px;
+}
+.user-input-wrp .floating-label {
+	position: absolute;
+	pointer-events: none;
+	top: 18px;
+	left: 10px;
+	transition: 0.2s ease all;
+}
+.user-input-wrp input:focus ~ .floating-label,
+.user-input-wrp input:not(:focus):valid ~ .floating-label{
+	top: 0px;
+	left: 10px;
+	font-size: 13px;
+	opacity: 1;
+}
+/* PLACEHOLDER TOP */
+
 
 
 #cardSimu button{
@@ -127,7 +165,6 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 #cardSimu button:active{
-    transition: 0s;
     background-color: #974f07;
 }
 

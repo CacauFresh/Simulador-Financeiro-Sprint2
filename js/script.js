@@ -2,6 +2,7 @@
 function perdaCheckon() {
   if (valorPerdaCheck.checked == true){
     esconder.style.display = "none"
+
     }else{
       esconder.style.display = "flex"
     }    
