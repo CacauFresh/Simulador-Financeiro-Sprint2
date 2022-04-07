@@ -49,6 +49,8 @@ function calcular() {
     span_recConPerd1.innerHTML = `${format_lucroConPerda} `
     span_recSenPerd1.innerHTML = `${format_lucroIdeal} `
     span_preju1.innerHTML = `${format_prejuizoBruto}`
+    span_percent_Venda1.innerHTML= `${percent_Venda.toFixed(2)}`
+    span_percent_Preju1.innerHTML = `${percent_Preju.toFixed(2)}`
 
     span_colheita2.innerHTML = `${colheita} Kg`
     span_recConPerd2.innerHTML = `${format_lucroConPerda} `
@@ -61,6 +63,7 @@ function calcular() {
     span_percent_Preju2.innerHTML = `${percent_Preju.toFixed(2)}`
 
     articleResult.style.display = "flex"
+    articleResult.style.width = "90%"
     cardResult.style.backgroundColor = "#EBFFE1"
     cardResult.style.width = "68vw"
     cardSimu.style.width = "30vw"
@@ -71,6 +74,7 @@ function calcular() {
     cardDiagram.style.width = "0"
     cardDiagram.style.opacity = "0"
     cardDiagram.style.pointerEvents = "none"
+    
   }
 
 function mostrarDiagram(){
@@ -82,7 +86,7 @@ function mostrarDiagram(){
     //cardDiagram.style.display = "block"
     btnVoltar.style.display = "none"
     topoSimu.style.marginTop = "20%"
-    topoSimu.style.fontSize = "32px"
+    topoSimu.style.fontSize = "26px"
     cardDiagram.style.width = "33vw"
     cardDiagram.style.opacity = "1"
 }
